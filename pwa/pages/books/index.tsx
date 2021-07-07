@@ -23,7 +23,7 @@ const Page: NextComponentType<NextPageContext, Props, Props> = ({
 );
 
 Page.getInitialProps = async () => {
-  const collection = await fetch("cda2-devops-hamza.simplon-roanne.com/books");
+  const collection = await fetch("/books");
 
   return { collection };
 };
