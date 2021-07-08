@@ -3,9 +3,9 @@ export class Book {
 
   constructor(
     _id?: string,
-    public author?: string,
     public name?: string,
-    public datePublished?: Date
+    public author?: string,
+    public datePublished?: string
   ) {
     this["@id"] = _id;
   }

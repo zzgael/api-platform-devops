@@ -69,6 +69,25 @@ export const Form: FunctionComponent<Props> = ({ book }) => {
         }) => (
           <form onSubmit={handleSubmit}>
             <div className="form-group">
+              <label className="form-control-label" htmlFor="_name">
+                name
+              </label>
+              <input
+                name="name"
+                id="_name"
+                value={values.name ?? ""}
+                type="text"
+                placeholder=""
+                className={`form-control${
+                  errors.name && touched.name ? " is-invalid" : ""
+                }`}
+                aria-invalid={errors.name && touched.name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+            </div>
+            <ErrorMessage className="text-danger" component="div" name="name" />
+            <div className="form-group">
               <label className="form-control-label" htmlFor="_author">
                 author
               </label>
@@ -91,25 +110,6 @@ export const Form: FunctionComponent<Props> = ({ book }) => {
               component="div"
               name="author"
             />
-            <div className="form-group">
-              <label className="form-control-label" htmlFor="_name">
-                name
-              </label>
-              <input
-                name="name"
-                id="_name"
-                value={values.name ?? ""}
-                type="text"
-                placeholder=""
-                className={`form-control${
-                  errors.name && touched.name ? " is-invalid" : ""
-                }`}
-                aria-invalid={errors.name && touched.name}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </div>
-            <ErrorMessage className="text-danger" component="div" name="name" />
             <div className="form-group">
               <label className="form-control-label" htmlFor="_datePublished">
                 datePublished

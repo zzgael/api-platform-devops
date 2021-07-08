@@ -22,12 +22,12 @@ class Book
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $author;
+    private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private $author;
 
     /**
      * @ORM\Column(type="date")
@@ -39,18 +39,6 @@ class Book
         return $this->id;
     }
 
-    public function getAuthor(): ?string
-    {
-        return $this->author;
-    }
-
-    public function setAuthor(string $author): self
-    {
-        $this->author = $author;
-
-        return $this;
-    }
-
     public function getName(): ?string
     {
         return $this->name;
@@ -59,6 +47,18 @@ class Book
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?string
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(string $author): self
+    {
+        $this->author = $author;
 
         return $this;
     }

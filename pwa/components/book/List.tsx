@@ -17,8 +17,8 @@ export const List: FunctionComponent<Props> = ({ books }) => (
       <thead>
         <tr>
           <th>id</th>
-          <th>author</th>
           <th>name</th>
+          <th>author</th>
           <th>datePublished</th>
           <th />
         </tr>
@@ -31,8 +31,8 @@ export const List: FunctionComponent<Props> = ({ books }) => (
               <th scope="row">
                 <ReferenceLinks items={book["@id"]} type="book" />
               </th>
-              <td>{book["author"]}</td>
               <td>{book["name"]}</td>
+              <td>{book["author"]}</td>
               <td>{book["datePublished"]}</td>
               <td>
                 <ReferenceLinks

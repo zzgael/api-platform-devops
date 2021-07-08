@@ -37,12 +37,12 @@ export const Show: FunctionComponent<Props> = ({ book }) => {
         </thead>
         <tbody>
           <tr>
-            <th scope="row">author</th>
-            <td>{book["author"]}</td>
-          </tr>
-          <tr>
             <th scope="row">name</th>
             <td>{book["name"]}</td>
+          </tr>
+          <tr>
+            <th scope="row">author</th>
+            <td>{book["author"]}</td>
           </tr>
           <tr>
             <th scope="row">datePublished</th>
